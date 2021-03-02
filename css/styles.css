@@ -1,0 +1,245 @@
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  background-color: var(--Light-Grayish-Blue);
+  padding: 60px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.main {
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    grid-column: 2/3;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    width: 850px;
+    height: 340px;
+  }
+}
+
+.picture {
+  padding: 0;
+  margin: 0;
+  height: 200px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .picture {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+  }
+}
+
+.picture__img {
+  border-radius: 10px 10px 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  .picture__img {
+    border-radius: 10px 0 0 10px;
+  }
+}
+
+.article {
+  padding: 0 23px;
+}
+
+@media screen and (min-width: 768px) {
+  .article {
+    grid-column: 2/-1;
+    padding: 0 35px;
+  }
+}
+
+.article__title {
+  color: var(--Very-Dark-Grayish-Blue);
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .article__title {
+    font-size: 1.3rem;
+  }
+}
+
+.article__paragraph {
+  color: var(--Desaturated-Dark-Blue);
+}
+
+@media screen and (min-width: 768px) {
+  .article__paragraph {
+    margin-bottom: 40px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    grid-column: 2/-1;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.card-bottom {
+  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .card-bottom {
+    width: 100%;
+  }
+}
+
+.card-buttom__img {
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  margin-top: 12px;
+}
+
+.card-buttom__title {
+  font-size: 0.9rem;
+  color: var(--Very-Dark-Grayish-Blue);
+  margin-left: 10px;
+}
+
+.card-buttom__span {
+  display: block;
+  color: var(--Desaturated-Dark-Blue);
+}
+
+.card-buttom__share {
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 50%;
+  padding: 10px;
+  height: 15px;
+  width: 15px;
+  margin-left: 48px;
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .card-buttom__share {
+    margin-left: 120px;
+  }
+}
+
+.card-show {
+  max-height: 0;
+  overflow: hidden;
+  transform: scaleY(0);
+}
+
+.card-show--active {
+  transform: scaleY(1);
+  transition: transform 0.2s;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  width: 304px;
+  max-height: 61.88px;
+  top: 405px;
+  left: 0;
+  background-color: var(--Very-Dark-Grayish-Blue);
+  border-radius: 0 0 10px 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .card-show--active {
+    top: 188px;
+    left: 665px;
+    width: 230px;
+    border-radius: 15px;
+    padding-bottom: 20px;
+    clip-path: polygon(
+      0% 0%,
+      100% 0%,
+      100% 75%,
+      55% 75%,
+      45% 100%,
+      35% 75%,
+      0% 75%
+    );
+  }
+}
+
+.card-show__title {
+  margin-left: 25px;
+  margin-top: 20px;
+  color: var(--Desaturated-Dark-Blue);
+}
+
+.card-list {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+.card-list__item {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .card-list__item {
+    margin-left: 18px;
+  }
+}
+
+.card-list__item:nth-child(2) {
+  margin: 2px;
+  margin-left: 18px;
+}
+
+.card-show__img {
+  background-color: hsl(214, 17%, 51%);
+  border-radius: 50%;
+  padding: 10px;
+  height: 15px;
+  width: 15px;
+  margin-left: 65px;
+  margin-top: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .card-show__img {
+    display: none;
+  }
+}
