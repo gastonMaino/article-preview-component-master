@@ -15,9 +15,9 @@ body {
 @media screen and (min-width: 768px) {
   body {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    padding: 0;
+    place-items: center;
+    margin: 0;
+    min-height: 100vh;
   }
 }
 
@@ -33,13 +33,11 @@ img {
 
 @media screen and (min-width: 768px) {
   .main {
-    grid-column: 2/3;
-    grid-row: 2;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    place-items: center;
-    width: 850px;
-    height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 730px;
+    height: 300px;
   }
 }
 
@@ -52,6 +50,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .picture {
+    display: flex;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -65,7 +64,11 @@ img {
 
 @media screen and (min-width: 768px) {
   .picture__img {
+    
+    clip-path: inset(0 2% 0 0);
     border-radius: 10px 0 0 10px;
+    object-fit: cover;
+    
   }
 }
 
@@ -75,8 +78,11 @@ img {
 
 @media screen and (min-width: 768px) {
   .article {
-    grid-column: 2/-1;
-    padding: 0 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 30px;
   }
 }
 
@@ -87,7 +93,8 @@ img {
 
 @media screen and (min-width: 768px) {
   .article__title {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    margin-bottom: 0;
   }
 }
 
@@ -97,16 +104,15 @@ img {
 
 @media screen and (min-width: 768px) {
   .article__paragraph {
-    margin-bottom: 40px;
-    font-size: 0.9rem;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   .footer {
-    grid-column: 2/-1;
-    padding: 0;
-    margin: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -117,6 +123,7 @@ img {
 @media screen and (min-width: 768px) {
   .card-bottom {
     width: 100%;
+    height: 100%;
   }
 }
 
@@ -161,8 +168,6 @@ img {
   border-radius: 50%;
   height: 35px;
   width: 35px;
-  display: grid;
-  place-content: center;
   margin-left: 3.5rem;
   margin-top: 12px;
 }
@@ -170,7 +175,7 @@ img {
 @media screen and (min-width: 768px) {
   .card-buttom__share {
     margin-top: 14px;
-    margin-left: 120px;
+    margin-left: 200px;
   }
 }
 
@@ -211,11 +216,11 @@ img {
 
 @media screen and (min-width: 768px) {
   .card-show--active {
-    top: 188px;
-    left: 665px;
+    top: 155px;
+    left: 555px;
     width: 230px;
     border-radius: 15px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     clip-path: polygon(
       0% 0%,
       100% 0%,
